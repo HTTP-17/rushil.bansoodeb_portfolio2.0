@@ -17,8 +17,10 @@
             padding: 0px 10px;
         }
         nav .logo img {
-            height: 90px; /* Adrust size as needed */
-            width: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    cursor: pointer;
         }
         
         ul {
