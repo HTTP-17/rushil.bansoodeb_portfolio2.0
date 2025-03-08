@@ -14,7 +14,6 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f8f8;
         }
 
         header {
@@ -130,7 +129,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #114B39;
+            background-color: #333;
             color: #fff;
             padding: 10px 20px;
         }
@@ -191,6 +190,143 @@ ul li a:hover {
             padding: 10px;
             margin-top: 20px;
         }
+
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .cover img {
+        max-width: 90%;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    /* Adjust Header */
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    /* Adjust Cover Image */
+    .cover img {
+        width: 100%;
+    }
+
+    /* Adjust Section Titles */
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Grid Adjustments */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Navigation Menu - Mobile */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Make navigation text larger */
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+    }
+
+    /* Adjust Footer */
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design for Small Phones */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .cover img {
+        max-width: 100%;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    /* Adjust Grid Layout */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid img {
+        width: 100%;
+    }
+
+    /* Fix button sizes */
+    .next-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -217,10 +353,14 @@ ul li a:hover {
 <body>
     <nav>
         <div class="logo">
-            <img src="image/LOGO.png" alt="MyPortfolio Logo">
-            </div>
+            <a href="index.html">
+                <img src="image/LOGO.png" alt="Logo">
+            </a>
+        </div>
         <ul>
-            <li><a href="portfolio.html">BACK</a></li>
+            <li><a href="about.html">ABOUT ME</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
     
@@ -228,15 +368,6 @@ ul li a:hover {
         <h1>Hemmings Classic Car</h1>
         <p>Classic Automobiles Since 1954</p>
     </header>
-
-    <section>
-        <h2>Hemming Classic Car</h2>
-        <ul>
-            <li>Redesigning Hemmings Classic Car Magazine was an exercise in balancing tradition with modernity. The challenge was to respect the magazine’s nostalgic essence while enhancing its visual appeal for a contemporary audience. By focusing on typography, layout, and hierarchy, I was able to create a design that honored the magazine’s history while improving readability and engagement. This project solidified my belief that great design should preserve a brand’s authenticity while adapting to new audiences and contexts.
-
-</li>
-        </ul>
-    </section>
 
     <div class="container">
         <section class="cover">
@@ -272,8 +403,17 @@ ul li a:hover {
             <img src="image/Assignment 3 -Editorial Desn_Page_10.jpg" alt="Hemmings Classic Car Cover">
         </section>
     </div>
+
+    <section>
+        <h2>Hemming Classic Car</h2>
+        <ul>
+            <li>Redesigning Hemmings Classic Car Magazine was an exercise in balancing tradition with modernity. The challenge was to respect the magazine’s nostalgic essence while enhancing its visual appeal for a contemporary audience. By focusing on typography, layout, and hierarchy, I was able to create a design that honored the magazine’s history while improving readability and engagement. This project solidified my belief that great design should preserve a brand’s authenticity while adapting to new audiences and contexts.
+
+</li>
+        </ul>
+    </section>
     <ul class="more next-button">
-        <li><a href="coffee.html">NEXT</a></li>
+        <li><a href="index.html">BACK</a></li>
     </ul>
     <footer>
         <p>&copy; 2025 | Rushil Bansoodeb Portfolio</p>
