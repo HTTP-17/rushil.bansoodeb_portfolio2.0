@@ -9,7 +9,6 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #f1eed6;
     animation: fadeIn 2s ease-in-out;
     justify-content: center;
 }
@@ -526,29 +525,226 @@ section {
     transition: 0.3s ease-in-out;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        margin: 40px auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack the container elements */
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Adjust text and image sections */
+    .text-section, .image-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Reduce font sizes for mobile */
+    .animated-heading {
+        font-size: 40px;
+    }
+
+    .animated-subheading {
+        font-size: 50px;
+    }
+
+    .welcome-text {
+        font-size: 22px;
+    }
+
+    /* Resize images for mobile */
+    .image-section img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Navigation Menu - Mobile */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Make navigation text larger */
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+    }
+
+    /* Adjust gallery for mobile */
+    .portfolio-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust typography for mobile */
+    .text-section h1 {
+        font-size: 22px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* Moodboard Section */
+    .moodboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Moodboard Image */
+    .mood-board img {
+        width: 100%;
+    }
+
+    /* Business Card Section */
+    .businesscard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .businesscard_img, 
+    .businesscard_img2, 
+    .businesscard_img3 {
+        max-width: 90%;
+    }
+
+    /* Posters & Billboard Adjustments */
+    .poster,
+    .billboard,
+    .ltd,
+    .pbillboard,
+    .wine {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    /* Adjust Footer */
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Portfolio heading */
+    .heading {
+        font-size: 2.5em;
+    }
+
+    /* Next Button Adjustments */
+    .more {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .next-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce text sizes for small phones */
+    .animated-heading {
+        font-size: 35px;
+    }
+
+    .animated-subheading {
+        font-size: 45px;
+    }
+
+    .welcome-text {
+        font-size: 20px;
+    }
+
+    /* Adjust header text */
+    .heading {
+        font-size: 2em;
+    }
+
+    /* Resize images further for smaller screens */
+    .image-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Reduce padding */
+    .container {
+        padding: 10px;
+    }
+
+    /* Adjust Poster Section */
+    .poster img,
+    .billboard img,
+    .ltd img,
+    .pbillboard img,
+    .wine img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Fix button sizes */
+    .next-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
 </style>
 
 </head>
 <body>
+
     <nav>
         <div class="logo">
-        <img src="image/LOGO.png" alt="MyPortfolio Logo">
+            <a href="index.html">
+                <img src="image/LOGO.png" alt="Logo">
+            </a>
         </div>
         <ul>
-            <li><a href="index.html">ABOUT ME</a></li>
+            <li><a href="about.html">ABOUT ME</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
 
-
-    <section>
-        <h2>Project for Viper Graphics Studio</h2>
-        <p>Viper Graphic Studio marks a turning point in my journey as a graphic designer, where I combine my creativity with strategy to build a strong and eye catching brand identity from the ground up. This project challenged me to think beyond aesthetics and focus on solving complex design problems while maintaining a visually compelling and functional outcome.</p>
-        <p>Through Viper Graphic, I developed a complete branding suite, demonstrating my ability to create impactful visuals, establish a clear design language, and deliver polished, high-quality work. More than just a portfolio piece, this project showcases my growth in balancing technical precision with creative expression, ensuring that every element serves both form and function.</p>
-        <p>This experience has reinforced my passion for design and my commitment to crafting innovative solutions that leave a lasting impression.
-        </p>
-    </section>
 
     <div class="main-content">
         <div class="portfolio-gallery">
@@ -621,8 +817,17 @@ section {
         <img src="image/ltd.jpg">
      </div>
 
+
+    <section>
+        <h2>Project for Viper Graphics Studio</h2>
+        <p>Viper Graphic Studio marks a turning point in my journey as a graphic designer, where I combine my creativity with strategy to build a strong and eye catching brand identity from the ground up. This project challenged me to think beyond aesthetics and focus on solving complex design problems while maintaining a visually compelling and functional outcome.</p>
+        <p>Through Viper Graphic, I developed a complete branding suite, demonstrating my ability to create impactful visuals, establish a clear design language, and deliver polished, high-quality work. More than just a portfolio piece, this project showcases my growth in balancing technical precision with creative expression, ensuring that every element serves both form and function.</p>
+        <p>This experience has reinforced my passion for design and my commitment to crafting innovative solutions that leave a lasting impression.
+        </p>
+    </section>
+
      <ul class="more next-button">
-        <li><a href="hemming.html">NEXT</a></li>
+        <li><a href="index.html">BACK</a></li>
     </ul>
     
 
