@@ -4,75 +4,499 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rushil Bansoodeb Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 0px 10px;
+        }
+        nav .logo img {
+            height: 90px; /* Adrust size as needed */
+            width: auto; /* Maintain aspect ratio */
+        }
+        
+        ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Center-align the list */
+            margin: 20px 0; /* Add spacing around the footer list */
+        }
+        
+        /* Footer list item styling */
+        ul li {
+            display: inline-block; /* Keep the list item inline */
+        }
+        
+        /* Styling for the button link */
+        ul li a {
+            display: inline-block; /* Makes the link behave like a button */
+            padding: 10px 20px; /* Add space inside the button */
+            font-size: 16px; /* Adjust font size */
+            font-weight: bold; /* Make the text bold */
+            color: #fff; /* Button text color (white) */
+            background-color: #c28b32; /* Button background color (blue) */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+        }
+        
+        /* Hover effect for the button */
+        ul li a:hover {
+            background-color: #f1eed6; /* Darker blue on hover */
+            color: #c28b32;
+            transform: translateY(-3px); /* Slightly lift the button */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        }
+        
+        /* Optional: Adjust button style for smaller screens */
+        @media (max-width: 768px) {
+            ul li a {
+                padding: 8px 16px; /* Reduce padding for smaller devices */
+                font-size: 14px; /* Adjust font size */
+            }
+        }
+
+
+/* Intro Section */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 50px;
+    flex-wrap: wrap;
+}
+
+
+
+.image-section img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* Styling the text container */
+.IMRB {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Making the text bigger */
+.animated-heading {
+    font-size: 70px; /* Increased size */
+    color: #333;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-subheading {
+    font-size: 80px; /* Increased size */
+    color: #f4a261;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: slideIn 2s ease-in-out;
+}
+
+/* Welcome text styling */
+.welcome-text {
+    font-size: 30px;
+    color: #666;
+    margin-top: 20px;
+    font-weight: 500;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Tumble Gallery Styling */
+.tumble-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    justify-items: center;
+}
+
+.tumble-item {
+    width: 100%;
+    max-width: 400px; /* Adjust the max width */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tumble-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Hover Effect */
+.tumble-item:hover {
+    transform: scale(1.05);
+}
+
+.tumble-item img:hover {
+    opacity: 0.8;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tumble-gallery {
+        grid-template-columns: 1fr; /* Stack images on smaller screens */
+    }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .animated-heading {
+        font-size: 50px;
+    }
+
+    .animated-subheading {
+        font-size: 60px;
+    }
+
+    .welcome-text {
+        font-size: 24px;
+    }
+}
+
+footer {
+            padding: 5px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+      /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* NAVIGATION BAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    position: relative;
+}
+
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Navigation for Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* INTRO SECTION */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Text Section */
+.IMRB {
+    max-width: 50%;
+}
+
+/* Image Section */
+.image-section img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* TEXT STYLING */
+.animated-heading {
+    font-size: 60px;
+    color: #333;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-subheading {
+    font-size: 70px;
+    color: #f4a261;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: slideIn 2s ease-in-out;
+}
+
+.welcome-text {
+    font-size: 26px;
+    color: #666;
+    margin-top: 20px;
+    font-weight: 500;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* IMAGE GALLERY */
+.tumble-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    justify-items: center;
+}
+
+.tumble-item {
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tumble-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.tumble-item:hover {
+    transform: scale(1.05);
+}
+
+.tumble-item img:hover {
+    opacity: 0.8;
+}
+
+.tumble-item .hover-text {
+    position: absolute;
+    top: 10px; /* Positioning at the top of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(56, 185, 225);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    opacity: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #f4a261;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .IMRB {
+        max-width: 100%;
+    }
+
+    .animated-heading {
+        font-size: 40px;
+    }
+
+    .animated-subheading {
+        font-size: 50px;
+    }
+
+    .welcome-text {
+        font-size: 22px;
+    }
+
+    .image-section img {
+        width: 200px;
+    }
+
+    .tumble-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+    </style>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <img src="image/LOGO.png">
+            <a href="index.html">
+                <img src="image/LOGO.png" alt="Logo">
+            </a>
         </div>
         <ul>
-            <li><a href="index.html">ABOUT ME</a></li>
+            <li><a href="about.html">ABOUT ME</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
-    <header class="portfolio-header">
-        <h1 class="heading">Designing with Purpose, Creating with Passion</h1>
-      </header>
     <div class="container">
-        <div class="text-section">
-            <h1>Who Am I? </h1>
-            <p>Hi, I’m Rushil Bansoodeb, a creative graphic designer. I grew up on a tropical island called Mauritius. After completing high school, I moved to Canada to continue my studies in art and media at Humber Polytechnic, where I pursued an Advanced Diploma in Graphic Design. I enjoy exploring new challenges, whether it’s designing or facing the reality. My goal is to apply my talents to create meaningful, innovative designs while gaining valuable industry experience.
-
-                What makes me unique is that I don’t consider my job just a profession but a passion. Another thing about me is that I always find ways to enjoy life for example, snowboarding in winter or skateboarding with friends</p>
+        <div class="IMRB">
+            <h1 class="animated-heading">Hi, I'm</h1>
+            <h2 class="animated-subheading">Rushil Bansoodeb</h2>
+            <p class="welcome-text">Welcome To My Creative World</p>
         </div>
+        
         <div class="image-section">
-            <img src="image/75d03844-e1c3-48d9-a9ab-4a75ade58e5a.jpg" alt="Placeholder Image">
+            <img src="Humber Headshots00894.jpeg" alt="Placeholder Image">
         </div>
     </div>
-    <header>
-        <h1>My Experience</h1>
-        <p>Graphic Designer | Bilingual (English & French) | Based in Oakville, ON</p>
-    </header>
-    <section>
-        <h2>Professional Profile</h2>
-        <p>Experienced in <span class="highlight">graphic design</span> and <span class="highlight">digital marketing</span>, with a strong focus on creating visually impactful and brand-consistent designs. Proficient in <span class="highlight">Adobe Creative Suite</span> and <span class="highlight">HTML5/CSS</span>. Adept at managing multiple projects, ensuring timely delivery without compromising quality.</p>
-    </section>
-    <section>
-        <h2>Technologies, Design, and Development</h2>
-        <ul>
-            <li>Website and Digital Content Creation</li>
-            <li>Email Template Design & Development</li>
-            <li>Social Media Marketing</li>
-            <li>HTML5 & CSS</li>
-            <li>Responsive Design & SEO</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Software Applications</h2>
-        <ul>
-            <li>Adobe Photoshop, Illustrator, InDesign</li>
-            <li>Figma, Canva, and Google Slides</li>
-            <li>Microsoft 365 Office</li>
-            <li>Motion Design Utilities</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Professional Experience</h2>
-        <ul>
-            <li><strong>Front Desk Assistance:</strong> Delivered exceptional support at Humber Residence, managing calls, welcoming guests, and maintaining records.</li>
-            <li><strong>Digital Marketing:</strong> Created marketing videos and managed social media accounts to enhance brand visibility.</li>
-            <li><strong>Graphic Design:</strong> Designed banners, templates, and promotional ads for digital campaigns.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <p><strong>Advanced Diploma in Graphic Design</strong> - North Humber Polytechnic</p>
-    </section>
+
+    <div class="tumble-gallery">
+        <div class="tumble-item">
+            <a href="hemming.html">
+                <span class="hover-text">Click Me</span> <!-- "Click Me" text -->
+                <img src="tumble-01.png" alt="Project 1">
+            </a>
+        </div>
+        <div class="tumble-item">
+            <a href="portfolio.html">
+                <span class="hover-text">Click Me</span>
+                <img src="tumble-02.png" alt="Project 2">
+            </a>
+        </div>
+        <div class="tumble-item">
+            <a href="coffee.html">
+                <span class="hover-text">Click Me</span>
+                <img src="tumble-03.png" alt="Project 3">
+            </a>
+        </div>
+    </div>
+    
+    
     <footer>
         <p>&copy; 2025 | Rushil Bansoodeb Portfolio</p>
         <p><a href="docs/Rushil Bansoodeb Resume.pdf" target="_blank">View My Full Resume (PDF)</a></p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
