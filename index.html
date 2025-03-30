@@ -13,23 +13,109 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* TUMBLE GALLERY */
+        /* NAVIGATION BAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            position: relative;
+        }
+
+        nav .logo img {
+            height: 90px;
+            width: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            color: #f4a261;
+        }
+
+        /* INTRO SECTION */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 80px 50px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .IMRB {
+            max-width: 50%;
+        }
+
+        .image-section img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .animated-heading {
+            font-size: 60px;
+            color: #333;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .animated-subheading {
+            font-size: 70px;
+            color: #f4a261;
+            font-weight: bold;
+            margin-top: 10px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .welcome-text {
+            font-size: 26px;
+            color: #666;
+            margin-top: 20px;
+            font-weight: 500;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* IMAGE GALLERY */
         .tumble-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 50px;
             justify-items: center;
+            text-align: center;
         }
 
         .tumble-item {
             max-width: 400px;
-            overflow: hidden;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
             text-align: center;
             position: relative;
+        }
+
+        .tumble-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
         }
 
         .tumble-item img {
@@ -40,70 +126,99 @@
             transition: opacity 0.3s ease-in-out;
         }
 
-        .tumble-item:hover {
-            transform: scale(1.05);
-        }
-
         .tumble-item:hover img {
             opacity: 0.8;
         }
 
-        .title {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
         .click-me {
             position: absolute;
-            bottom: 10px;
+            bottom: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 14px;
+            transform: translate(-50%, 50%);
             font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+            color: white;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: none;
         }
 
         .tumble-item:hover .click-me {
-            opacity: 1;
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #f4a261;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/LOGO.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">ABOUT ME</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="IMRB">
+            <h1 class="animated-heading">Hi, I'm</h1>
+            <h2 class="animated-subheading">Rushil Bansoodeb</h2>
+            <p class="welcome-text">I'm a Multidisciplinary Designer from Mauritius Island.</p>
+        </div>
+        <div class="image-section">
+            <img src="Humber Headshots00894.jpeg" alt="Placeholder Image">
+        </div>
+    </div>
+
     <div class="tumble-gallery">
         <div class="tumble-item">
-            <div class="title">Hemmings Project</div>
+            <p class="tumble-title">Hemmings Classic Car</p>
             <a href="hemming.html">
                 <img src="tumble-01.png" alt="Project 1">
-                <div class="click-me">Click Me</div>
+                <span class="click-me">Click Me</span>
             </a>
         </div>
         <div class="tumble-item">
-            <div class="title">Portfolio Showcase</div>
+            <p class="tumble-title">Portfolio Showcase</p>
             <a href="portfolio.html">
                 <img src="tumble-02.png" alt="Project 2">
-                <div class="click-me">Click Me</div>
+                <span class="click-me">Click Me</span>
             </a>
         </div>
         <div class="tumble-item">
-            <div class="title">Coffee Branding</div>
+            <p class="tumble-title">Coffee Shop Branding</p>
             <a href="coffee.html">
                 <img src="tumble-03.png" alt="Project 3">
-                <div class="click-me">Click Me</div>
+                <span class="click-me">Click Me</span>
             </a>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 | Rushil Bansoodeb Portfolio</p>
+        <p><a href="docs/Rushil Bansoodeb Resume.pdf" target="_blank">View My Full Resume (PDF)</a></p>
+    </footer>
 </body>
 </html>
