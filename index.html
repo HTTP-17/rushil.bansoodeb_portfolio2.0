@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rushil Bansoodeb Portfolio</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -13,14 +12,12 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* NAVIGATION BAR */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: #333;
             padding: 15px 20px;
-            position: relative;
         }
 
         nav .logo img {
@@ -50,7 +47,35 @@
             color: #f4a261;
         }
 
-        /* INTRO SECTION */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
         .container {
             display: flex;
             justify-content: space-around;
@@ -60,62 +85,28 @@
             text-align: center;
         }
 
-        .IMRB {
-            max-width: 50%;
-        }
-
-        .image-section img {
-            width: 250px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .animated-heading {
-            font-size: 60px;
-            color: #333;
-            font-weight: bold;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .animated-subheading {
-            font-size: 70px;
-            color: #f4a261;
-            font-weight: bold;
-            margin-top: 10px;
-            animation: slideIn 2s ease-in-out;
-        }
-
-        .welcome-text {
-            font-size: 26px;
-            color: #666;
-            margin-top: 20px;
-            font-weight: 500;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        /* IMAGE GALLERY */
         .tumble-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 50px;
             justify-items: center;
-            text-align: center;
         }
 
         .tumble-item {
             max-width: 400px;
+            overflow: hidden;
             border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
-            position: relative;
+            padding: 10px;
         }
 
         .tumble-title {
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 10px;
             color: #333;
+            margin-bottom: 10px;
         }
 
         .tumble-item img {
@@ -126,44 +117,26 @@
             transition: opacity 0.3s ease-in-out;
         }
 
-        .tumble-item:hover img {
-            opacity: 0.8;
-        }
-
         .click-me {
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            transform: translate(-50%, 50%);
             font-weight: bold;
-            color: white;
+            color: #f4a261;
             font-size: 18px;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: none;
+            text-align: center;
+            margin-top: 10px;
         }
 
-        .tumble-item:hover .click-me {
-            display: block;
+        .tumble-body {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
         }
 
-        /* FOOTER */
         footer {
             text-align: center;
             background-color: #333;
             color: white;
             padding: 20px;
             margin-top: 50px;
-        }
-
-        footer a {
-            color: #f4a261;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -179,40 +152,35 @@
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
-
-    <div class="container">
-        <div class="IMRB">
-            <h1 class="animated-heading">Hi, I'm</h1>
-            <h2 class="animated-subheading">Rushil Bansoodeb</h2>
-            <p class="welcome-text">I'm a Multidisciplinary Designer from Mauritius Island.</p>
-        </div>
-        <div class="image-section">
-            <img src="Humber Headshots00894.jpeg" alt="Placeholder Image">
-        </div>
-    </div>
 
     <div class="tumble-gallery">
         <div class="tumble-item">
-            <p class="tumble-title">Hemmings Classic Car</p>
+            <div class="tumble-title">Hemmings Classic Car Redesign</div>
             <a href="hemming.html">
                 <img src="tumble-01.png" alt="Project 1">
-                <span class="click-me">Click Me</span>
             </a>
+            <div class="click-me">Click Me</div>
+            <p class="tumble-body">A redesign of Hemmings Classic Car magazine, incorporating modern editorial design techniques.</p>
         </div>
+
         <div class="tumble-item">
-            <p class="tumble-title">Portfolio Showcase</p>
+            <div class="tumble-title">Portfolio Showcase</div>
             <a href="portfolio.html">
                 <img src="tumble-02.png" alt="Project 2">
-                <span class="click-me">Click Me</span>
             </a>
+            <div class="click-me">Click Me</div>
+            <p class="tumble-body">A curated selection of my best design works, highlighting my skills in branding and visual storytelling.</p>
         </div>
+
         <div class="tumble-item">
-            <p class="tumble-title">Coffee Shop Branding</p>
+            <div class="tumble-title">Coffee Shop Branding</div>
             <a href="coffee.html">
                 <img src="tumble-03.png" alt="Project 3">
-                <span class="click-me">Click Me</span>
             </a>
+            <div class="click-me">Click Me</div>
+            <p class="tumble-body">A full branding package for a coffee shop concept, including logo, packaging, and promotional materials.</p>
         </div>
     </div>
 
@@ -220,5 +188,12 @@
         <p>&copy; 2025 | Rushil Bansoodeb Portfolio</p>
         <p><a href="docs/Rushil Bansoodeb Resume.pdf" target="_blank">View My Full Resume (PDF)</a></p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
