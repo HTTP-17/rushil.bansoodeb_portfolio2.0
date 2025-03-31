@@ -129,6 +129,19 @@
             opacity: 0.8;
         }
 
+        .click-me {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+
         footer {
             text-align: center;
             background-color: #333;
@@ -170,6 +183,7 @@
             }
         }
         @media (max-width: 768px) {
+
     /* Stack the container elements */
     .container {
         flex-direction: column;
@@ -202,75 +216,12 @@
         height: auto;
     }
 
-    /* Navigation Menu - Mobile */
-    nav {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-    }
+    ul li a {
+                padding: 8px 16px; /* Reduce padding for smaller devices */
+                font-size: 14px; /* Adjust font size */
+            }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #333;
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    /* Make navigation text larger */
-    .nav-links a {
-        font-size: 18px;
-    }
-
-    /* Hamburger Menu */
-    .hamburger {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        color: white;
-        padding: 10px;
-    }
-
-    /* Adjust gallery for mobile */
-    .tumble-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    /* Adjust typography for mobile */
-    .text-section h1 {
-        font-size: 22px;
-    }
-
-    .text-section p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    /* Footer adjustments */
-    footer {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    /* Portfolio heading */
-    .heading {
-        font-size: 2.5em;
-    }
-}
+        }
 
         
     </style>
@@ -305,20 +256,28 @@
             <p class="tumble-title">Viper Graphics</p>
             <a href="portfolio.html">
                 <img src="tumble-02.png" alt="Project 2">
+                <div class="click-me">Click Me</div>
             </a>
         </div>
+        <p class="tumble-text">Branding/MockUp/Design/Illustrator/Packaging/Billboard/Printing/Moodboard</p>
+
         <div class="tumble-item">
             <p class="tumble-title">Hemmings Classic Car</p>
             <a href="hemming.html">
                 <img src="tumble-01.png" alt="Project 1">
+                <div class="click-me">Click Me</div>
             </a>
         </div>
+        <p class="tumble-text">Editorial Design/Printing/Magazin/Design</p>
+
         <div class="tumble-item">
             <p class="tumble-title">Melody Coffee</p>
             <a href="coffee.html">
                 <img src="tumble-03.png" alt="Project 3">
+                <div class="click-me">Click Me</div>
             </a>
         </div>
+        <p class="tumble-text">Branding/Desgin/Illustrator/Mock-up/Packaging</p>
     </div>
 
     <footer>
