@@ -130,6 +130,8 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                text-aline: centre;
+              
             }
             .text-section, .image-section {
                 width: 100%;
