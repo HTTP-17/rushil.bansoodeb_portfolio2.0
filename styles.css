@@ -130,7 +130,6 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                text-aline: centre;
               
             }
             .text-section, .image-section {
@@ -141,31 +140,27 @@
             padding: 30px;
             width: 50%;
             background-color: #f9f9f9;
-            text-aline: centre;
+
         }
         .text-section h1 {
             margin-bottom: 20px;
             font-size: 24px;
             color: #333;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            text-aline: centre;
         }
         .text-section p {
             font-size: 18px;
             color: #666;
             line-height: 2;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            text-aline: centre;
         }
         .image-section {
             width: 50%;
-            text-aline: centre;
         }
         .image-section img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            text-aline: centre;
         }
         @media (max-width: 768px) {
             .container {
@@ -173,7 +168,6 @@
             }
             .text-section, .image-section {
                 width: 100%;
-                text-aline: centre;
             }
         }
 
