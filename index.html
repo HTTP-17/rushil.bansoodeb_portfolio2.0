@@ -13,47 +13,61 @@
         }
 
         nav {
-    background-color: #333;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo a img {
-    width: 150px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-
-        /* Responsive Design for Mobile */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 0px 10px;
+        }
+        nav .logo img {
+            height: 90px; /* Adrust size as needed */
+            width: auto; /* Maintain aspect ratio */
+        }
+        
+        ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Center-align the list */
+            margin: 20px 0; /* Add spacing around the footer list */
+        }
+        
+        /* Footer list item styling */
+        ul li {
+            display: inline-block; /* Keep the list item inline */
+        }
+        
+        /* Styling for the button link */
+        ul li a {
+            display: inline-block; /* Makes the link behave like a button */
+            padding: 10px 20px; /* Add space inside the button */
+            font-size: 16px; /* Adjust font size */
+            font-weight: bold; /* Make the text bold */
+            color: #fff; /* Button text color (white) */
+            background-color: #c28b32; /* Button background color (blue) */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+        }
+        
+        /* Hover effect for the button */
+        ul li a:hover {
+            background-color: #f1eed6; /* Darker blue on hover */
+            color: #c28b32;
+            transform: translateY(-3px); /* Slightly lift the button */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        }
+        
+        /* Optional: Adjust button style for smaller screens */
         @media (max-width: 768px) {
             ul li a {
-                font-size: 14px;
-            }
-
-            .logo img {
-                max-width: 80px;
+                padding: 8px 16px; /* Reduce padding for smaller devices */
+                font-size: 14px; /* Adjust font size */
             }
         }
+
+      
 
         .container {
             display: flex;
