@@ -25,18 +25,12 @@
             width: auto;
         }
 
-        /* Mobile Navigation toggle */
-        .nav-toggle {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-        }
-
+        /* Desktop and Tablet Navigation */
         ul {
             list-style: none;
             padding: 0;
-            text-align: center;
             margin: 20px 0;
+            display: flex;
         }
 
         ul li {
@@ -63,7 +57,22 @@
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Mobile Styles */
+        /* Mobile Navigation */
+        .nav-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -72,16 +81,18 @@
                 padding: 15px;
             }
 
+            /* Mobile Toggle Button */
+            .nav-toggle {
+                display: block;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
             .nav-links {
                 display: none;
                 flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
                 width: 100%;
-                background: #333;
-                padding: 10px 0;
-                text-align: center;
+                margin-top: 10px;
             }
 
             .nav-links.active {
@@ -93,44 +104,23 @@
                 margin: 10px 0;
             }
 
-            .nav-links a {
+            ul li a {
+                padding: 12px 20px;
                 font-size: 18px;
             }
 
-            .nav-toggle {
-                display: block;
-            }
-
-            ul li a {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-
-            /* Add space between image and welcome text on mobile */
             .container {
                 flex-direction: column;
                 text-align: center;
                 padding: 30px;
             }
 
-            .IMRB {
-                max-width: 100%;
-            }
-
-            .animated-heading {
-                font-size: 40px;
-            }
-
-            .animated-subheading {
-                font-size: 50px;
+            .image-section img {
+                margin-top: 20px; /* Space between the picture and text */
             }
 
             .welcome-text {
-                margin-top: 20px; /* Adding space */
-            }
-
-            .image-section img {
-                margin-top: 20px; /* Adding space */
+                margin-top: 20px; /* Space between the picture and text */
             }
         }
 
