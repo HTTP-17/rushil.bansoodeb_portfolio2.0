@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rushil Bansoodeb Portfolio</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -13,19 +12,16 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* NAVIGATION BAR */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: #333;
             padding: 15px 20px;
-            position: relative;
         }
 
         nav .logo img {
             height: 90px;
-            width: auto;
         }
 
         .nav-links {
@@ -34,28 +30,23 @@
             gap: 30px;
         }
 
-        .nav-links li {
-            display: inline-block;
-        }
-
         .nav-links a {
             text-decoration: none;
             color: white;
             font-size: 18px;
             font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s;
         }
 
         .nav-links a:hover {
             color: #f4a261;
         }
 
-        /* INTRO SECTION */
         .container {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 80px 50px;
+            padding: 50px;
             flex-wrap: wrap;
             text-align: center;
         }
@@ -66,41 +57,34 @@
 
         .image-section img {
             width: 250px;
-            height: auto;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .animated-heading {
-            font-size: 60px;
+            font-size: 50px;
             color: #333;
             font-weight: bold;
-            animation: fadeIn 2s ease-in-out;
         }
 
         .animated-subheading {
-            font-size: 70px;
+            font-size: 60px;
             color: #f4a261;
             font-weight: bold;
             margin-top: 10px;
-            animation: slideIn 2s ease-in-out;
         }
 
         .welcome-text {
-            font-size: 26px;
+            font-size: 22px;
             color: #666;
             margin-top: 20px;
-            font-weight: 500;
-            animation: fadeIn 3s ease-in-out;
         }
 
-        /* IMAGE GALLERY */
         .tumble-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 50px;
-            justify-items: center;
             text-align: center;
         }
 
@@ -108,7 +92,6 @@
             max-width: 400px;
             border-radius: 15px;
             text-align: center;
-            position: relative;
         }
 
         .tumble-title {
@@ -120,42 +103,15 @@
 
         .tumble-item img {
             width: 100%;
-            height: auto;
             border-radius: 15px;
             cursor: pointer;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s;
         }
 
         .tumble-item:hover img {
             opacity: 0.8;
         }
 
-        .click-me {
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            transform: translate(-50%, 50%);
-            font-weight: bold;
-            color: white;
-            font-size: 18px;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: none;
-        }
-
-        .tumble-item:hover .click-me {
-            display: block;
-        }
-
-         .tumble-text {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-            text-align: left;
-        }
-
-        /* FOOTER */
         footer {
             text-align: center;
             background-color: #333;
@@ -171,6 +127,26 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .IMRB {
+                max-width: 100%;
+            }
+
+            .animated-heading {
+                font-size: 40px;
+            }
+
+            .animated-subheading {
+                font-size: 50px;
+            }
         }
     </style>
 </head>
@@ -195,35 +171,27 @@
             <p class="welcome-text">I'm a Multidisciplinary Designer from Mauritius Island.</p>
         </div>
         <div class="image-section">
-            <img src="Humber Headshots00894.jpeg" alt="Placeholder Image">
+            <img src="Humber Headshots00894.jpeg" alt="Profile Image">
         </div>
     </div>
     
-
     <div class="tumble-gallery">
         <div class="tumble-item">
             <p class="tumble-title">Viper Graphics</p>
             <a href="portfolio.html">
                 <img src="tumble-02.png" alt="Project 2">
-                <p class="tumble-text">Illustrator/Design/Mock-Ups/Branding/Logo Variation/Poster/Billboards/Packaging</p>
-                <span class="click-me">Click Me</span>
             </a>
         </div>
         <div class="tumble-item">
             <p class="tumble-title">Hemmings Classic Car</p>
             <a href="hemming.html">
                 <img src="tumble-01.png" alt="Project 1">
-                <p class="tumble-text">Editoral Design/Design/Photoshop</p>
-                <span class="click-me">Click Me</span>
             </a>
         </div>
-        
         <div class="tumble-item">
             <p class="tumble-title">Melody Coffee</p>
             <a href="coffee.html">
                 <img src="tumble-03.png" alt="Project 3">
-                <p class="tumble-text">Branding/Packaging/Logo Variation</p>
-                <span class="click-me">Click Me</span>
             </a>
         </div>
     </div>
