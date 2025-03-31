@@ -264,7 +264,7 @@
     /* Stack the container elements */
     .container {
         flex-direction: column;
-        text-align: center;
+        text-align: justify;
         padding: 20px;
     }
 
