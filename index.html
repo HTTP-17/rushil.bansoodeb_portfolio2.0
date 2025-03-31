@@ -66,6 +66,47 @@
                 font-size: 14px; /* Adjust font size */
             }
         }
+
+        @media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack the items vertically */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    nav .logo img {
+        height: 70px; /* Slightly smaller logo */
+    }
+
+    ul {
+        margin: 10px 0; /* Less margin around the list */
+    }
+
+    ul li {
+        display: block; /* Stack list items vertically */
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    ul li a {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 15px; /* Less padding on very small screens */
+    }
+
+    nav .logo img {
+        height: 60px; /* Even smaller logo for small screens */
+    }
+
+    ul li a {
+        font-size: 12px; /* Further decrease font size */
+        padding: 6px 12px; /* Decrease padding */
+    }
+}
+
  
 
         .container {
