@@ -59,51 +59,62 @@
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
         }
         
-        /* Optional: Adjust button style for smaller screens */
-        @media (max-width: 768px) {
+  .@media (max-width: 768px) {
             ul li a {
                 padding: 8px 16px; /* Reduce padding for smaller devices */
                 font-size: 14px; /* Adjust font size */
             }
         }
 
-        @media (max-width: 768px) {
+    @media (max-width: 768px) {
+    
+   /* Navigation Menu - Mobile */
     nav {
-        flex-direction: column; /* Stack the items vertically */
-        padding: 10px 20px; /* Adjust padding */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
     }
 
-    nav .logo img {
-        height: 70px; /* Slightly smaller logo */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 10px 0;
+        text-align: center;
     }
 
-    ul {
-        margin: 10px 0; /* Less margin around the list */
+    .nav-links.active {
+        display: flex;
     }
 
-    ul li {
-        display: block; /* Stack list items vertically */
-        margin-bottom: 10px; /* Add space between items */
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
     }
 
-    ul li a {
-        font-size: 14px; /* Smaller font size */
-        padding: 8px 16px; /* Adjust button padding */
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        padding: 10px 15px; /* Less padding on very small screens */
+    /* Make navigation text larger */
+    .nav-links a {
+        font-size: 18px;
     }
 
-    nav .logo img {
-        height: 60px; /* Even smaller logo for small screens */
+    /* Hamburger Menu */
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
     }
 
-    ul li a {
-        font-size: 12px; /* Further decrease font size */
-        padding: 6px 12px; /* Decrease padding */
+    /* Adjust Footer */
+    footer {
+        padding: 10px;
+        font-size: 14px;
     }
 }
 
